@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twins or Dreams? World Models for Robot Learning | R-WM @ ICLR 2027</title>
+  <meta name="description" content="ICLR 2027 workshop on world models for robot learning. Digital twins or video dreams?">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f4bff'/%3E%3Cpath d='M8 10h16M16 10v14' stroke='white' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,0..100&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">R-WM<span> @ ICLR 2027</span></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#cfp">Call for papers</a>
+        <a href="#organizers">Organizers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <h1 aria-label="Twins or Dreams? World Models for Robot Learning">
+          <span class="word w-twins" aria-hidden="true">Twins</span>
+          <span class="or" aria-hidden="true">or</span>
+          <span class="dq" aria-hidden="true"><span class="word w-dreams">Dreams</span><span class="q">?</span></span>
+        </h1>
+        <p class="subtitle">World Models for Robot Learning</p>
+        <p class="tagline" data-bind="tagline"></p>
+        <ul class="badges" id="badges"></ul>
+        <a class="btn" href="#cfp">Call for papers</a>
+      </div>
+      <a class="cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="about" class="sec">
+      <div class="wrap">
+        <p class="eyebrow"><span>01</span> About</p>
+        <h2>About</h2>
+        <p class="lede" data-bind="about"></p>
+        <div class="versus" id="versus"></div>
+        <p class="shared" id="shared"></p>
+      </div>
+    </section>
+
+    <section id="topics" class="sec tint">
+      <div class="wrap">
+        <p class="eyebrow"><span>02</span> Topics</p>
+        <h2>Topics</h2>
+        <p class="note" id="topics-intro"></p>
+        <div class="topic-groups" id="topics-list"></div>
+      </div>
+    </section>
+
+    <section id="speakers" class="sec">
+      <div class="wrap">
+        <p class="eyebrow"><span>03</span> Speakers</p>
+        <h2>Speakers</h2>
+        <p class="note" id="speakers-note"></p>
+        <div class="cards" id="speakers-grid"></div>
+      </div>
+    </section>
+
+    <section id="schedule" class="sec tint">
+      <div class="wrap">
+        <p class="eyebrow"><span>04</span> Schedule</p>
+        <h2>Schedule</h2>
+        <p class="note" id="schedule-note"></p>
+        <table class="schedule">
+          <thead><tr><th scope="col">Time</th><th scope="col">Session</th></tr></thead>
+          <tbody id="schedule-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cfp" class="sec">
+      <div class="wrap">
+        <p class="eyebrow"><span>05</span> Call for papers</p>
+        <h2>Call for papers</h2>
+        <p class="lede" id="cfp-intro"></p>
+        <h3 class="subhead">Topics include</h3>
+        <ul class="chips" id="cfp-topics"></ul>
+        <p class="cfp-note" id="cfp-topics-note"></p>
+        <ul class="tracks" id="cfp-tracks"></ul>
+        <table class="dates">
+          <caption class="sr">Key dates</caption>
+          <tbody id="cfp-dates"></tbody>
+        </table>
+        <a class="btn" id="cfp-submit" href="#cfp"></a>
+      </div>
+    </section>
+
+    <section id="organizers" class="sec tint">
+      <div class="wrap">
+        <p class="eyebrow"><span>06</span> Organizers</p>
+        <h2>Organizers</h2>
+        <div class="cards" id="organizers-grid"></div>
+      </div>
+    </section>
+
+    <section id="previous" class="sec">
+      <div class="wrap">
+        <p class="eyebrow"><span>07</span> Previous editions</p>
+        <h2>Previous editions</h2>
+        <ul class="prev" id="prev-list"></ul>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-inner">
+      <div>
+        <p class="foot-title">R-WM @ ICLR 2027</p>
+        <p>Contact: <a data-bind-mail="contactEmail"></a></p>
+        <p><a data-bind-href="iclrUrl" href="https://iclr.cc/">ICLR website</a></p>
+      </div>
+      <ul class="sponsors" id="sponsors" aria-label="Sponsors"></ul>
+    </div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
