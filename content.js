@@ -3,39 +3,40 @@ window.CONTENT = {
   shortName: "R-WM @ ICLR 2027",
   title: "Twins or Dreams?",
   subtitle: "World Models for Robot Learning",
-  tagline: ["Robots can learn in a copy of the world or in a dream of it.", "Which one should they trust?"],
+  tagline: ["Robots can learn in a copy of the world or in a dream of it.", "Which should they trust, and when?"],
   // Hero badges. Set placeholder: true for a dashed, to-be-confirmed look.
   badges: [
-    { text: "ICLR 2027", primary: true },
+    { text: "ICLR 2027" },
     { text: "San Francisco, CA" },
-    { text: "29 April" },
-    { text: "Room XX", placeholder: true },
+    { text: "April 2027" },
   ],
   contactEmail: "[contact@email.tbd]",
   iclrUrl: "https://iclr.cc/",
 
   about:
     "Robots cannot learn everything by trial and error in the real world. Robot data is scarce and every real test costs time and hardware. " +
-    "World models predict how the world responds to a robot's actions, so robots can learn, plan and be evaluated in imagination instead.",
+    "World models predict how the world responds to a robot's actions, shifting the cost of learning, planning and evaluation from robot-hours to compute.",
 
   twinsDreams: {
     twins: {
       name: "Twins",
       kind: "Digital twins",
       line: "Reconstruct a specific scene inside a physics simulator.",
-      pros: "Faithful. Physics holds up through contact.",
-      cons: "Narrow. Built one scene at a time.",
+      pros: "Grounded. Physically consistent by construction, and answers actions never seen in data.",
+      cons: "Narrow. Each scene must be scanned, rebuilt and calibrated.",
     },
     dreams: {
       name: "Dreams",
       kind: "Video world models",
-      line: "Learn how the world looks and moves from internet-scale video.",
+      line: "Learn how the world looks and moves from internet and robot video.",
       pros: "Broad. Transfers across objects, tasks and scenes.",
-      cons: "Unfaithful. Objects can warp or vanish on contact.",
+      cons: "Statistical. Objects can appear or vanish on contact.",
     },
     shared:
-      "The line between them is blurring, and both face the same open problems. Pixels do not reveal mass or friction. " +
-      "Long rollouts drift. And we cannot yet tell when an imagined outcome can be trusted. " +
+      "Each now borrows from the other. Agents build twins, and physics solvers steer video models. " +
+      "But they fail differently. Twins must estimate mass and friction, while video models never represent them. " +
+      "Twins drift wherever their physics is wrong, while learned models compound their own errors. " +
+      "And neither can yet say in advance when a prediction is good enough to act on. " +
       "This workshop asks what a robot's world model must capture, and how it should be built, combined and trusted.",
   },
 
@@ -76,19 +77,21 @@ window.CONTENT = {
       items: [
         {
           title: "Long-horizon reliability",
-          text: "Small prediction errors compound over long rollouts, and planners exploit them.",
+          text: "Learned models compound small errors that planners exploit. Twins drift wherever their physics or calibration is wrong.",
           question: "How can imagined rollouts stay reliable, and how can a robot tell when they are not?",
         },
         {
           title: "Evaluation",
-          text: "World models are increasingly used to test robot policies, yet they can hallucinate success, and benchmarks reward visual quality.",
+          text: "World models and twins are increasingly used to test robot policies, yet visual quality does not predict usefulness, and agreement with real outcomes is measured only after the fact.",
           question: "What should a benchmark measure before a world model is trusted with real decisions?",
         },
       ],
     },
   ],
 
-  speakersNote: "Voices from both directions.",
+  speakersNote: "Voices from twins, dreams and everything in between.",
+  speakersEmpty: "Invited speakers to be announced.",
+  // Template cards: replace each one with a real speaker. With an empty list the section shows speakersEmpty instead.
   speakers: [
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg" },
@@ -99,19 +102,21 @@ window.CONTENT = {
   ],
 
   scheduleNote: "Tentative. One day, in person.",
+  // Times are placeholders. type: "talk", "lightning", "poster", "break", "debate" or "opening". Set highlight for the debate.
   schedule: [
-    { time: "[09:00]", session: "Opening remarks" },
-    { time: "[09:15]", session: "Invited talk: [Speaker Name]" },
-    { time: "[09:55]", session: "Invited talk: [Speaker Name]" },
-    { time: "[10:35]", session: "Coffee break" },
-    { time: "[11:00]", session: "Lightning talks" },
-    { time: "[11:40]", session: "Invited talk: [Speaker Name]" },
-    { time: "[12:20]", session: "Lunch" },
-    { time: "[13:30]", session: "Poster session" },
-    { time: "[14:30]", session: "Invited talk: [Speaker Name]" },
-    { time: "[15:10]", session: "Invited talk: [Speaker Name]" },
-    { time: "[15:50]", session: "Panel discussion: Twins or Dreams?", highlight: true },
-    { time: "[16:50]", session: "Best paper award and closing" },
+    { start: "09:00", end: "09:10", type: "opening", kind: "Opening", title: "Opening remarks" },
+    { start: "09:10", end: "09:50", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
+    { start: "09:50", end: "10:30", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
+    { start: "10:30", end: "11:00", type: "break", kind: "Break", title: "Coffee break" },
+    { start: "11:00", end: "11:40", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
+    { start: "11:40", end: "12:20", type: "lightning", kind: "Accepted papers", title: "Lightning talks" },
+    { start: "12:20", end: "13:30", type: "break", kind: "Break", title: "Lunch" },
+    { start: "13:30", end: "14:30", type: "poster", kind: "Posters", title: "Poster session" },
+    { start: "14:30", end: "15:10", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
+    { start: "15:10", end: "15:50", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
+    { start: "15:50", end: "16:10", type: "break", kind: "Break", title: "Coffee break" },
+    { start: "16:10", end: "17:10", type: "debate", kind: "Debate", title: "Structured debate: Twins or Dreams?", who: "[Panelist Names]", highlight: true },
+    { start: "17:10", end: "17:25", type: "opening", kind: "Closing", title: "Best paper award and closing" },
   ],
 
   cfp: {
@@ -128,7 +133,7 @@ window.CONTENT = {
       { label: "Submission deadline", value: "[TBD, around 1 February 2027]" },
       { label: "Notification", value: "[TBD, by 26 February 2027]" },
       { label: "Camera ready", value: "[TBD]" },
-      { label: "Workshop", value: "29 April 2027" },
+      { label: "Workshop", value: "April 2027 (day TBC)" },
     ],
   },
   cfpTopics: [
@@ -159,8 +164,9 @@ window.CONTENT = {
   ],
 
   previous: [
+    { name: "Learning to Simulate Robot Worlds", venue: "CoRL 2025, Seoul", url: "https://simulatingrobotworlds.github.io/" },
     { name: "Robot World Models (R-WM)", venue: "RSS 2026, Sydney", url: "https://robot-worldmodels.github.io/" },
   ],
 
-  sponsors: [{ name: "[Sponsor]" }, { name: "[Sponsor]" }, { name: "[Sponsor]" }],
+  sponsors: [], // add { name, logo, url } entries here to show a sponsors row
 };

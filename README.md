@@ -20,6 +20,10 @@ Each item is one card with `title`, `text` and `question` (shown as "Open questi
 The group names also pick the marker style in the CSS (`.build`, `.combine`, `.trust`), so keep those three names or add matching styles.
 `topicsIntro` is the line under the heading.
 
+**Schedule.** Each entry in `schedule` has `start`, `end`, `type`, `kind` (the small label), `title` and optionally `who`.
+`type` is `talk`, `lightning`, `poster`, `break`, `debate` or `opening` and picks the marker. Add `highlight: true` for the debate row.
+The times are placeholders until the program is fixed.
+
 **Submission topics.** `cfpTopics` is the list of chips under "Topics include" in the call for papers. `cfpTopicsNote` is the line below them.
 
 ## Replace photos

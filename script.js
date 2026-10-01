@@ -23,7 +23,7 @@
     var v = C[n.dataset.bindMail];
     n.textContent = v;
     if (/@/.test(v) && v.charAt(0) !== "[") n.href = "mailto:" + v;
-    else n.classList.add("todo");
+    else n.parentNode.style.display = "none"; // no real address yet: hide the contact line
   });
 
   // Twins vs dreams
@@ -90,16 +90,27 @@
       $(target).appendChild(card);
     });
   }
-  people(C.speakers, "#speakers-grid");
+  if (C.speakers.length) people(C.speakers, "#speakers-grid");
+  else {
+    $("#speakers-grid").style.display = "none";
+    $("#speakers-note").insertAdjacentElement("afterend", el("p", "empty", C.speakersEmpty));
+  }
   people(C.organizers.slice(0, 8), "#organizers-grid");
 
   // Schedule
   $("#schedule-note").textContent = C.scheduleNote;
   C.schedule.forEach(function (r) {
-    var tr = el("tr", r.highlight ? "hl" : "");
-    tr.appendChild(el("td", "t", r.time));
-    tr.appendChild(el("td", null, r.session));
-    $("#schedule-body").appendChild(tr);
+    var li = el("li", "slot slot-" + r.type + (r.highlight ? " hl" : ""));
+    var when = el("div", "when");
+    when.appendChild(el("span", "start", r.start));
+    when.appendChild(el("span", "end", r.end));
+    li.appendChild(when);
+    var what = el("div", "what");
+    what.appendChild(el("p", "kind", r.kind));
+    what.appendChild(el("h3", "slot-title", r.title));
+    if (r.who) what.appendChild(el("p", "who", r.who));
+    li.appendChild(what);
+    $("#schedule-body").appendChild(li);
   });
 
   // CFP
@@ -133,6 +144,7 @@
   });
 
   // Sponsors
+  if (!C.sponsors.length) $("#sponsors").style.display = "none";
   C.sponsors.forEach(function (s) {
     var li = el("li", s.logo ? "" : "sponsor-ph");
     if (s.logo) {
