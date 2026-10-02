@@ -71,7 +71,7 @@
   $("#speakers-note").textContent = C.speakersNote;
   function people(list, target) {
     list.forEach(function (p) {
-      var isPh = p.name.charAt(0) === "[" || /placeholder/.test(p.photo || "");
+      var isPh = /placeholder/.test(p.photo || "");
       var card = el("article", "card" + (isPh ? " is-placeholder" : ""));
       var frame = el("div", "photo");
       var img = el("img");
@@ -100,7 +100,7 @@
   // Schedule
   $("#schedule-note").textContent = C.scheduleNote;
   C.schedule.forEach(function (r) {
-    var li = el("li", "slot slot-" + r.type + (r.highlight ? " hl" : ""));
+    var li = el("li", "slot slot-" + r.type + (r.highlight ? " hl" : "") + (r.newColumn ? " newcol" : ""));
     var when = el("div", "when");
     when.appendChild(el("span", "start", r.start));
     when.appendChild(el("span", "end", r.end));

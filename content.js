@@ -102,7 +102,7 @@ window.CONTENT = {
   ],
 
   scheduleNote: "Tentative. One day, in person.",
-  // Times are placeholders. type: "talk", "lightning", "poster", "break", "debate" or "opening". Set highlight for the debate.
+  // Times are placeholders. type: "talk", "lightning", "poster", "break", "debate" or "opening". Set highlight for the debate. newColumn starts the second column on desktop.
   schedule: [
     { start: "09:00", end: "09:10", type: "opening", kind: "Opening", title: "Opening remarks" },
     { start: "09:10", end: "09:50", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
@@ -111,7 +111,7 @@ window.CONTENT = {
     { start: "11:00", end: "11:40", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
     { start: "11:40", end: "12:20", type: "lightning", kind: "Accepted papers", title: "Lightning talks" },
     { start: "12:20", end: "13:30", type: "break", kind: "Break", title: "Lunch" },
-    { start: "13:30", end: "14:30", type: "poster", kind: "Posters", title: "Poster session" },
+    { start: "13:30", end: "14:30", type: "poster", kind: "Posters", title: "Poster session", newColumn: true },
     { start: "14:30", end: "15:10", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
     { start: "15:10", end: "15:50", type: "talk", kind: "Invited talk", title: "[Talk title]", who: "[Speaker Name], [Affiliation]" },
     { start: "15:50", end: "16:10", type: "break", kind: "Break", title: "Coffee break" },
@@ -155,12 +155,12 @@ window.CONTENT = {
   organizers: [
     { name: "Nikolaos Tsagkas", affiliation: "University of Amsterdam", url: "https://tsagkas.github.io/", photo: "assets/tsagkas.jpg" },
     { name: "Christian Gumbsch", affiliation: "University of Amsterdam", url: "https://cgumbsch.github.io/", photo: "assets/gumbsh.png" },
+    { name: "Iman Nematollahi", affiliation: "University of Freiburg", url: "https://imanema.com/", photo: "assets/nematollahi.jpeg" },
     { name: "Sathya Bhethanabhotla", affiliation: "University of Amsterdam", url: "", photo: "assets/sathya.jpg" },
+    { name: "Bahey Tharwat", affiliation: "Robot Learning Lab, University of Freiburg", url: "", photo: "assets/tharwat.png" },
+    { name: "Alberta Longhini", affiliation: "Stanford University", url: "https://albilo17.github.io/", photo: "assets/longhini.jpg" },
     { name: "Abhinav Valada", affiliation: "University of Freiburg", url: "https://rl.informatik.uni-freiburg.de/people/valada", photo: "assets/valada.jpeg" },
     { name: "Efstratios Gavves", affiliation: "University of Amsterdam", url: "https://www.egavves.com/", photo: "assets/gavves.jpeg" },
-    { name: "[Organizer Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg" },
-    { name: "[Organizer Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg" },
-    { name: "[Organizer Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg" },
   ],
 
   previous: [

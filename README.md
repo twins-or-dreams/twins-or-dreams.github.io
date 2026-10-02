@@ -32,7 +32,7 @@ The times are placeholders until the program is fixed.
 2. In `content.js`, set `photo: "assets/your-file.jpg"` for that person.
 3. Set `url` to make the name a link.
 
-Current organizer photos: `tsagkas.jpg`, `gumbsh.png`, `sathya.jpg`, `valada.jpeg`, `gavves.jpeg`.
+Current organizer photos: `tsagkas.jpg`, `gumbsh.png`, `sathya.jpg`, `valada.jpeg`, `gavves.jpeg`, `longhini.jpg`, `nematollahi.jpeg`, `tharwat.png`.
 
 Sponsor logos work the same way: add `logo` and `url` to an entry in `sponsors`.
 
