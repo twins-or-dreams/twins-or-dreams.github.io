@@ -242,6 +242,13 @@ h1 {
 .open-label { margin: 0 0 0.4rem; font: 600 0.72rem/1 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .open-text { margin: 0; font-style: italic; font-weight: 500; }
 
+/* Speakers: one group per side */
+.sgroup + .sgroup { margin-top: 2.75rem; }
+.sgroup .thead { margin-bottom: 1.25rem; }
+.sgroup .cards { justify-content: flex-start; }
+.sg-twins .mark { background: var(--accent); }
+.sg-dreams .mark { border-radius: 50%; background: linear-gradient(135deg, var(--soft-b), var(--soft-c)); filter: blur(1.5px); }
+
 /* Cards */
 .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
 .card {

@@ -87,10 +87,25 @@
       else name.textContent = p.name;
       card.appendChild(name);
       card.appendChild(el("p", null, p.affiliation));
-      $(target).appendChild(card);
+      (typeof target === "string" ? $(target) : target).appendChild(card);
     });
   }
-  if (C.speakers.length) people(C.speakers, "#speakers-grid");
+  if (C.speakers.length) {
+    // Two groups, one per side of the debate
+    [["twins", "Twins"], ["dreams", "Dreams"]].forEach(function (g) {
+      var list = C.speakers.filter(function (p) { return p.side === g[0]; });
+      if (!list.length) return;
+      var group = el("div", "sgroup sg-" + g[0]);
+      var h = el("h3", "thead");
+      h.appendChild(el("span", "mark"));
+      h.appendChild(document.createTextNode(g[1]));
+      group.appendChild(h);
+      var grid = el("div", "cards");
+      group.appendChild(grid);
+      people(list, grid);
+      $("#speakers-grid").appendChild(group);
+    });
+  }
   else {
     $("#speakers-grid").style.display = "none";
     $("#speakers-note").insertAdjacentElement("afterend", el("p", "empty", C.speakersEmpty));
