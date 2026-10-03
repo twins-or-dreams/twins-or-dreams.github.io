@@ -91,14 +91,14 @@ window.CONTENT = {
 
   speakersNote: "Voices from twins, dreams and everything in between.",
   speakersEmpty: "Invited speakers to be announced.",
-  // side: "twins" or "dreams" decides the group. Template cards: replace each one with a real speaker.
+  // side: "twins" or "dreams" decides the group. photoPos (optional) sets the crop, e.g. "50% 20%". Template cards: replace each one with a real speaker.
   // With an empty list the section shows speakersEmpty instead.
   speakers: [
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "Danijar Hafner", affiliation: "Google DeepMind", url: "https://danijar.com/", photo: "assets/images.jpeg", side: "dreams" },
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "dreams" },
+    { name: "Elahe Arani", affiliation: "Wayve and TU/e", url: "https://sites.google.com/view/elahe-arani", photo: "assets/arani.jpg", photoPos: "45% 20%", side: "dreams" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "dreams" },
   ],
 

@@ -78,6 +78,7 @@
       img.src = p.photo || "assets/placeholder-person.svg";
       img.alt = (isPh ? "Placeholder portrait for " : "Portrait of ") + p.name;
       img.loading = "lazy";
+      if (p.photoPos) img.style.objectPosition = p.photoPos;
       img.width = 136; img.height = 136;
       frame.appendChild(img);
       card.appendChild(frame);
