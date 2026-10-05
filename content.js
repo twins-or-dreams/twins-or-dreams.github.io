@@ -94,7 +94,7 @@ window.CONTENT = {
   // side: "twins" or "dreams" decides the group. photoPos (optional) sets the crop, e.g. "50% 20%". Template cards: replace each one with a real speaker.
   // With an empty list the section shows speakersEmpty instead.
   speakers: [
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
+    { name: "Yunzhu Li", affiliation: "Columbia University", url: "https://yunzhuli.github.io/", photo: "assets/yunzhu.jpeg", side: "twins" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "Danijar Hafner", affiliation: "Google DeepMind", url: "https://danijar.com/", photo: "assets/images.jpeg", side: "dreams" },
