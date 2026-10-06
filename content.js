@@ -95,7 +95,7 @@ window.CONTENT = {
   // With an empty list the section shows speakersEmpty instead.
   speakers: [
     { name: "Yunzhu Li", affiliation: "Columbia University", url: "https://yunzhuli.github.io/", photo: "assets/yunzhu.jpeg", side: "twins" },
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
+    { name: "Yuke Zhu", affiliation: "UT Austin and NVIDIA", url: "https://yukezhu.me/", photo: "assets/yukezhu.jpg", photoPos: "50% 25%", side: "twins" },
     { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "Danijar Hafner", affiliation: "Google DeepMind", url: "https://danijar.com/", photo: "assets/images.jpeg", side: "dreams" },
     { name: "Elahe Arani", affiliation: "Wayve and TU/e", url: "https://sites.google.com/view/elahe-arani", photo: "assets/arani.jpg", photoPos: "45% 20%", side: "dreams" },
