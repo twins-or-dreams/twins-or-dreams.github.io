@@ -13,7 +13,7 @@ Static site for R-WM @ ICLR 2027. No build step.
 ## Edit content
 
 Open `content.js`. Everything in `[square brackets]` is a placeholder.
-Change dates, speakers, organizers (max 8), schedule rows, the OpenReview link (`cfp.submitUrl`), the contact email and sponsors there.
+Change dates, speakers, organizers, schedule rows, the OpenReview link (`cfp.submitUrl`), the contact email and sponsors there.
 
 **Topics.** Each entry in `topics` has a `group` name (Build, Combine or Trust) and a list of `items`.
 Each item is one card with `title`, `text` and `question` (shown as "Open question"). Keep two items per group so the rows line up across columns.
@@ -24,7 +24,7 @@ The group names also pick the marker style in the CSS (`.build`, `.combine`, `.t
 `type` is `talk`, `lightning`, `poster`, `break`, `debate` or `opening` and picks the marker. Add `highlight: true` for the debate row.
 The times are placeholders until the program is fixed.
 
-**Speakers.** Each speaker has `side: "twins"` or `"dreams"`, which decides the group under the Speakers heading.
+**Speakers.** Each speaker has `side: "twins"` or `"dreams"`, which decides the group under the Speakers heading. `status` is `"confirmed"` or `"tentative"` and shows the small indicator on the card.
 
 **Submission topics.** `cfpTopics` is the list of chips under "Topics include" in the call for papers. `cfpTopicsNote` is the line below them.
 
@@ -34,7 +34,7 @@ The times are placeholders until the program is fixed.
 2. In `content.js`, set `photo: "assets/your-file.jpg"` for that person.
 3. Set `url` to make the name a link.
 
-Current organizer photos: `tsagkas.jpg`, `gumbsh.png`, `sathya.jpg`, `valada.jpeg`, `gavves.jpeg`, `longhini.jpg`, `nematollahi.jpeg`, `tharwat.png`.
+Current organizer photos: `tsagkas.jpg`, `gumbsh.png`, `sathya.jpg`, `valada.jpeg`, `gavves.jpeg`, `longhini.jpg`, `nematollahi.jpeg`, `tharwat.png`, `gamba.jpg`.
 
 Sponsor logos work the same way: add `logo` and `url` to an entry in `sponsors`.
 

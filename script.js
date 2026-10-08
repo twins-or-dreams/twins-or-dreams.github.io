@@ -88,6 +88,7 @@
       else name.textContent = p.name;
       card.appendChild(name);
       card.appendChild(el("p", null, p.affiliation));
+      if (p.status) card.appendChild(el("span", "status " + p.status, p.status === "confirmed" ? "Confirmed" : "Tentative"));
       (typeof target === "string" ? $(target) : target).appendChild(card);
     });
   }
@@ -111,7 +112,7 @@
     $("#speakers-grid").style.display = "none";
     $("#speakers-note").insertAdjacentElement("afterend", el("p", "empty", C.speakersEmpty));
   }
-  people(C.organizers.slice(0, 8), "#organizers-grid");
+  people(C.organizers, "#organizers-grid");
 
   // Schedule
   $("#schedule-note").textContent = C.scheduleNote;

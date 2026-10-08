@@ -91,15 +91,15 @@ window.CONTENT = {
 
   speakersNote: "Voices from twins, dreams and everything in between.",
   speakersEmpty: "Invited speakers to be announced.",
-  // side: "twins" or "dreams" decides the group. photoPos (optional) sets the crop, e.g. "50% 20%". Template cards: replace each one with a real speaker.
-  // With an empty list the section shows speakersEmpty instead.
+  // side: "twins" or "dreams" decides the group. status: "confirmed" or "tentative" shows a small indicator.
+  // photoPos (optional) sets the crop, e.g. "50% 20%".
   speakers: [
-    { name: "Yunzhu Li", affiliation: "Columbia University", url: "https://yunzhuli.github.io/", photo: "assets/yunzhu.jpeg", side: "twins" },
-    { name: "Yuke Zhu", affiliation: "UT Austin and NVIDIA", url: "https://yukezhu.me/", photo: "assets/yukezhu.jpg", photoPos: "50% 25%", side: "twins" },
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
-    { name: "Danijar Hafner", affiliation: "Google DeepMind", url: "https://danijar.com/", photo: "assets/images.jpeg", side: "dreams" },
-    { name: "Elahe Arani", affiliation: "Wayve and TU/e", url: "https://sites.google.com/view/elahe-arani", photo: "assets/arani.jpg", photoPos: "45% 20%", side: "dreams" },
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "dreams" },
+    { name: "Yunzhu Li", affiliation: "Columbia University", url: "https://yunzhuli.github.io/", photo: "assets/yunzhu.jpeg", side: "twins", status: "confirmed" },
+    { name: "Yuke Zhu", affiliation: "UT Austin and NVIDIA", url: "https://yukezhu.me/", photo: "assets/yukezhu.jpg", photoPos: "50% 25%", side: "twins", status: "tentative" },
+    { name: "Marco Pavone", affiliation: "Stanford University", url: "https://web.stanford.edu/~pavone/index.html", photo: "assets/pavone.jpeg", photoPos: "50% 35%", side: "twins", status: "tentative" },
+    { name: "Danijar Hafner", affiliation: "Google DeepMind", url: "https://danijar.com/", photo: "assets/images.jpeg", side: "dreams", status: "confirmed" },
+    { name: "Elahe Arani", affiliation: "Wayve and TU/e", url: "https://sites.google.com/view/elahe-arani", photo: "assets/arani.jpg", photoPos: "45% 20%", side: "dreams", status: "confirmed" },
+    { name: "Ingmar Posner", affiliation: "Oxford Robotics Institute", url: "https://ori.ox.ac.uk/people/ingmar-posner", photo: "assets/posner.jpg", photoPos: "50% 35%", side: "dreams", status: "tentative" },
   ],
 
   scheduleNote: "Tentative. One day, in person.",
@@ -152,14 +152,16 @@ window.CONTENT = {
   ],
   cfpTopicsNote: "We welcome work in progress, comparisons of different world models on the same task, and negative results.",
 
-  // Max 8. Photos: put each image in assets/ and set the path.
+  // Photos: put each image in assets/ and set the path.
   organizers: [
+    // Postdocs first, then PhD students, then PIs.
     { name: "Nikolaos Tsagkas", affiliation: "University of Amsterdam", url: "https://tsagkas.github.io/", photo: "assets/tsagkas.jpg" },
     { name: "Christian Gumbsch", affiliation: "University of Amsterdam", url: "https://cgumbsch.github.io/", photo: "assets/gumbsh.png" },
     { name: "Iman Nematollahi", affiliation: "University of Freiburg", url: "https://imanema.com/", photo: "assets/nematollahi.jpeg" },
+    { name: "Alberta Longhini", affiliation: "Stanford University", url: "https://albilo17.github.io/", photo: "assets/longhini.jpg" },
+    { name: "Matteo Gamba", affiliation: "KTH Royal Institute of Technology", url: "https://www.matteogamba.me/about/", photo: "assets/gamba.jpg", photoPos: "50% 35%" },
     { name: "Sathya Bhethanabhotla", affiliation: "University of Amsterdam", url: "", photo: "assets/sathya.jpg" },
     { name: "Bahey Tharwat", affiliation: "Robot Learning Lab, University of Freiburg", url: "", photo: "assets/tharwat.png" },
-    { name: "Alberta Longhini", affiliation: "Stanford University", url: "https://albilo17.github.io/", photo: "assets/longhini.jpg" },
     { name: "Abhinav Valada", affiliation: "University of Freiburg", url: "https://rl.informatik.uni-freiburg.de/people/valada", photo: "assets/valada.jpeg" },
     { name: "Efstratios Gavves", affiliation: "University of Amsterdam", url: "https://www.egavves.com/", photo: "assets/gavves.jpeg" },
   ],
