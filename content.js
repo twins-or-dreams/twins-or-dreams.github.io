@@ -159,7 +159,7 @@ window.CONTENT = {
     { name: "Christian Gumbsch", affiliation: "University of Amsterdam", url: "https://cgumbsch.github.io/", photo: "assets/gumbsh.png" },
     { name: "Iman Nematollahi", affiliation: "University of Freiburg", url: "https://imanema.com/", photo: "assets/nematollahi.jpeg" },
     { name: "Alberta Longhini", affiliation: "Stanford University", url: "https://albilo17.github.io/", photo: "assets/longhini.jpg" },
-    { name: "Matteo Gamba", affiliation: "KTH Royal Institute of Technology", url: "https://www.matteogamba.me/about/", photo: "assets/gamba.jpg", photoPos: "50% 35%" },
+    { name: "Matteo Gamba", affiliation: "Brown University", url: "https://www.matteogamba.me/about/", photo: "assets/gamba.jpg", photoPos: "50% 35%" },
     { name: "Sathya Bhethanabhotla", affiliation: "University of Amsterdam", url: "", photo: "assets/sathya.jpg" },
     { name: "Bahey Tharwat", affiliation: "Robot Learning Lab, University of Freiburg", url: "", photo: "assets/tharwat.png" },
     { name: "Abhinav Valada", affiliation: "University of Freiburg", url: "https://rl.informatik.uni-freiburg.de/people/valada", photo: "assets/valada.jpeg" },
