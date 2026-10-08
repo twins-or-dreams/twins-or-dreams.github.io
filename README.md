@@ -36,7 +36,7 @@ The times are placeholders until the program is fixed.
 
 Current organizer photos: `tsagkas.jpg`, `gumbsh.png`, `sathya.jpg`, `valada.jpeg`, `gavves.jpeg`, `longhini.jpg`, `nematollahi.jpeg`, `tharwat.png`, `gamba.jpg`.
 
-Sponsor logos work the same way: add `logo` and `url` to an entry in `sponsors`.
+University logos in the footer are the `institutions` list in `content.js` (`name`, `logo`, `url`, `height`). Use square emblems as transparent SVGs or PNGs. They are converted to one light grey tone on the dark page. Sponsor logos work the same way: add `logo` and `url` to an entry in `sponsors`.
 
 ## Preview locally
 

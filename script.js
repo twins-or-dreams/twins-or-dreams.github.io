@@ -173,6 +173,19 @@
     $("#sponsors").appendChild(li);
   });
 
+  // Institution logos
+  C.institutions.forEach(function (i) {
+    var li = el("li");
+    var a = el("a");
+    if (safeUrl(i.url)) { a.href = i.url; a.target = "_blank"; a.rel = "noopener"; }
+    var img = el("img");
+    img.src = i.logo; img.alt = i.name; img.loading = "lazy";
+    img.style.height = (i.height || 28) + "px";
+    a.appendChild(img);
+    li.appendChild(a);
+    $("#institutions").appendChild(li);
+  });
+
   // Highlight the nav link of the section in view
   var links = {};
   document.querySelectorAll("#menu a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });

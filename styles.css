@@ -330,6 +330,10 @@ table { border-collapse: collapse; width: 100%; }
 .todo { color: var(--muted); }
 .sponsors { list-style: none; display: flex; gap: 0.75rem; padding: 0; margin: 0; flex-wrap: wrap; align-items: center; }
 .sponsors img { height: 32px; width: auto; }
+.logos { list-style: none; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 1rem 1.5rem; padding: 0; margin: 0; }
+.logos a { display: block; }
+.logos img { width: auto; max-width: none; filter: grayscale(1) invert(1); opacity: 0.75; transition: opacity 0.2s; }
+.logos a:hover img, .logos a:focus-visible img { opacity: 1; }
 .sponsor-ph { border: 1px dashed var(--muted); color: var(--muted); padding: 1rem 1.6rem; border-radius: 4px; font-size: 0.9rem; }
 
 /* Tablet */
@@ -356,6 +360,7 @@ table { border-collapse: collapse; width: 100%; }
   .nav nav a { padding: 0.7rem 0; border-bottom: 0; border-left: 2px solid transparent; padding-left: 0.7rem; }
   .nav nav a[aria-current="true"] { border-left-color: var(--accent); }
   .brand span { display: none; }
+  .logos { justify-content: flex-start; }
   .versus { grid-template-columns: 1fr; }
   .tracks { grid-template-columns: 1fr; }
   .slot { grid-template-columns: 4.6rem 1fr; }

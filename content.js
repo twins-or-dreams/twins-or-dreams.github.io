@@ -171,5 +171,13 @@ window.CONTENT = {
     { name: "Robot World Models (R-WM)", venue: "RSS 2026, Sydney", url: "https://robot-worldmodels.github.io/" },
   ],
 
+  // University logos in the footer (square emblems). height is in px. Shown in one light tone on the dark page.
+  institutions: [
+    { name: "University of Amsterdam", logo: "assets/logos/uva.svg", url: "https://www.uva.nl/", height: 44 },
+    { name: "University of Freiburg", logo: "assets/logos/freiburg.svg", url: "https://uni-freiburg.de/", height: 44 },
+    { name: "Stanford University", logo: "assets/logos/stanford.svg", url: "https://www.stanford.edu/", height: 44 },
+    { name: "Brown University", logo: "assets/logos/brown.svg", url: "https://www.brown.edu/", height: 44 },
+  ],
+
   sponsors: [], // add { name, logo, url } entries here to show a sponsors row
 };
