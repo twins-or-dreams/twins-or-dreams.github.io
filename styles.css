@@ -231,8 +231,9 @@ h1 {
 #speakers-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; column-gap: 2rem; }
 .sgroup { display: grid; grid-row: span 2; grid-template-rows: subgrid; }
 .sgroup .thead { margin-bottom: 0.9rem; }
-.sgroup .cards { justify-content: flex-start; gap: 0.9rem; }
-.sgroup .card { width: calc((100% - 2 * 0.9rem) / 3); }
+.sgroup .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+.sgroup .card { width: auto; }
+.sgroup .card p { min-height: 2.8em; } /* reserve two affiliation lines so all cards match */
 .sgroup .photo { width: 96px; height: 96px; }
 .sg-twins .mark { background: var(--accent); }
 .sg-dreams .mark { border-radius: 50%; background: linear-gradient(135deg, var(--soft-b), var(--soft-c)); filter: blur(1.5px); }
@@ -250,14 +251,6 @@ h1 {
 .card h3 { margin-top: 0.8rem; font-size: 1rem; color: var(--ink); overflow-wrap: anywhere; }
 .card h3 a { color: var(--ink); }
 .card p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
-/* Speaker status: filled dot when confirmed, dashed outline when tentative */
-.status { display: inline-flex; align-self: center; align-items: center; gap: 0.4rem; margin-top: auto; padding: 0.1rem 0.6rem; border-radius: 999px; font-size: 0.78rem; line-height: 1.5; }
-.card p:has(+ .status) { margin-bottom: 0.55rem; }
-.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; }
-.status.confirmed { color: var(--ink); border: 1px solid var(--accent); }
-.status.confirmed::before { background: var(--accent); }
-.status.tentative { color: var(--muted); border: 1px dashed var(--muted); }
-.status.tentative::before { border: 1px solid var(--muted); }
 .photo { position: relative; width: 104px; height: 104px; margin: 0 auto; padding: 3px; border-radius: 50%; box-shadow: 0 8px 20px var(--shadow); }
 .photo::before, .photo::after {
   content: ""; position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
@@ -342,9 +335,8 @@ table { border-collapse: collapse; width: 100%; }
   .slot.newcol { break-before: auto; }
   #speakers-grid { grid-template-columns: 1fr; }
   .sgroup + .sgroup { margin-top: 1.5rem; }
-  .sgroup .card p { min-height: 2.8em; } /* stacked groups: reserve two affiliation lines so all cards match */
   .card, #organizers-grid .card { width: calc((100% - 2 * 1rem) / 3); }
-  .sgroup .card { width: calc((100% - 2 * 0.9rem) / 3); }
+  .sgroup .cards { grid-template-columns: repeat(4, 1fr); }
   .cfp-grid { grid-template-columns: 1fr; }
   .topic-groups { display: block; }
   .tgroup { display: block; margin-bottom: 1.5rem; }
@@ -369,7 +361,8 @@ table { border-collapse: collapse; width: 100%; }
 }
 @media (max-width: 560px) {
   .cards, .sgroup .cards { gap: 0.75rem; }
-  .card, .sgroup .card, #organizers-grid .card { width: calc((100% - 0.75rem) / 2); padding: 0.9rem 0.6rem; }
+  .sgroup .cards { grid-template-columns: repeat(2, 1fr); }
+  .card, #organizers-grid .card { width: calc((100% - 0.75rem) / 2); padding: 0.9rem 0.6rem; }
   .photo, .sgroup .photo { width: 88px; height: 88px; }
 }
 

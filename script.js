@@ -84,11 +84,10 @@
       card.appendChild(frame);
       var name = el("h3");
       var link = safeUrl(p.url || "");
-      if (link) { var a = el("a", null, p.name); a.href = link; name.appendChild(a); }
+      if (link) { var a = el("a", null, p.name); a.href = link; a.target = "_blank"; a.rel = "noopener"; name.appendChild(a); }
       else name.textContent = p.name;
       card.appendChild(name);
       card.appendChild(el("p", null, p.affiliation));
-      if (p.status) card.appendChild(el("span", "status " + p.status, p.status === "confirmed" ? "Confirmed" : "Tentative"));
       (typeof target === "string" ? $(target) : target).appendChild(card);
     });
   }

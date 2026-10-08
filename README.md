@@ -24,7 +24,7 @@ The group names also pick the marker style in the CSS (`.build`, `.combine`, `.t
 `type` is `talk`, `lightning`, `poster`, `break`, `debate` or `opening` and picks the marker. Add `highlight: true` for the debate row.
 The times are placeholders until the program is fixed.
 
-**Speakers.** Each speaker has `side: "twins"` or `"dreams"`, which decides the group under the Speakers heading. `status` is `"confirmed"` or `"tentative"` and shows the small indicator on the card.
+**Speakers.** Each speaker has `side: "twins"` or `"dreams"`, which decides the group under the Speakers heading.
 
 **Submission topics.** `cfpTopics` is the list of chips under "Topics include" in the call for papers. `cfpTopicsNote` is the line below them.
 
