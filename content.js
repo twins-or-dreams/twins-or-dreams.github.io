@@ -91,17 +91,15 @@ window.CONTENT = {
 
   speakersNote: "Voices from twins, dreams and everything in between.",
   speakersEmpty: "Invited speakers to be announced.",
-  // side: "twins" or "dreams" decides the group. Template cards: replace each one with a real speaker.
+  // side: "twins" or "dreams" decides the group. Add a fourth card per camp with { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" }.
   // photoPos (optional) sets the crop, e.g. "50% 20%".
   speakers: [
     { name: "Yunzhu Li", affiliation: "Columbia University", url: "https://yunzhuli.github.io/", photo: "assets/yunzhu.jpeg", side: "twins" },
     { name: "Yuke Zhu", affiliation: "UT Austin and NVIDIA", url: "https://yukezhu.me/", photo: "assets/yukezhu.jpg", photoPos: "50% 25%", side: "twins" },
     { name: "Marco Pavone", affiliation: "Stanford University", url: "https://web.stanford.edu/~pavone/index.html", photo: "assets/pavone.jpeg", photoPos: "50% 35%", side: "twins" },
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "twins" },
     { name: "Danijar Hafner", affiliation: "Google DeepMind", url: "https://danijar.com/", photo: "assets/images.jpeg", side: "dreams" },
     { name: "Elahe Arani", affiliation: "Wayve and TU/e", url: "https://sites.google.com/view/elahe-arani", photo: "assets/arani.jpg", photoPos: "45% 20%", side: "dreams" },
     { name: "Ingmar Posner", affiliation: "Oxford Robotics Institute", url: "https://ori.ox.ac.uk/people/ingmar-posner", photo: "assets/posner.jpg", photoPos: "50% 35%", side: "dreams" },
-    { name: "[Speaker Name]", affiliation: "[Affiliation]", url: "", photo: "assets/placeholder-person.svg", side: "dreams" },
   ],
 
   scheduleNote: "Tentative. One day, in person.",
@@ -161,7 +159,8 @@ window.CONTENT = {
     { name: "Christian Gumbsch", affiliation: "University of Amsterdam", url: "https://cgumbsch.github.io/", photo: "assets/gumbsh.png" },
     { name: "Iman Nematollahi", affiliation: "University of Freiburg", url: "https://imanema.com/", photo: "assets/nematollahi.jpeg" },
     { name: "Alberta Longhini", affiliation: "Stanford University", url: "https://albilo17.github.io/", photo: "assets/longhini.jpg" },
-    { name: "Matteo Gamba", affiliation: "Brown University", url: "https://www.matteogamba.me/about/", photo: "assets/gamba.jpg", photoPos: "50% 35%" },
+    // Hidden for now, uncomment to show Matteo again (photo is assets/gamba.jpg):
+    // { name: "Matteo Gamba", affiliation: "Brown University", url: "https://www.matteogamba.me/about/", photo: "assets/gamba.jpg", photoPos: "50% 35%" },
     { name: "Sathya Bhethanabhotla", affiliation: "University of Amsterdam", url: "", photo: "assets/sathya.jpg" },
     { name: "Bahey Tharwat", affiliation: "University of Freiburg", url: "", photo: "assets/tharwat.png" },
     { name: "Abhinav Valada", affiliation: "University of Freiburg", url: "https://rl.informatik.uni-freiburg.de/people/valada", photo: "assets/valada.jpeg" },
@@ -178,7 +177,8 @@ window.CONTENT = {
     { name: "University of Amsterdam", logo: "assets/logos/uva.svg", url: "https://www.uva.nl/", height: 44 },
     { name: "University of Freiburg", logo: "assets/logos/freiburg.svg", url: "https://uni-freiburg.de/", height: 44 },
     { name: "Stanford University", logo: "assets/logos/stanford.svg", url: "https://www.stanford.edu/", height: 44 },
-    { name: "Brown University", logo: "assets/logos/brown.svg", url: "https://www.brown.edu/", height: 44 },
+    // Hidden for now, uncomment to show the Brown logo again (file is assets/logos/brown.svg):
+    // { name: "Brown University", logo: "assets/logos/brown.svg", url: "https://www.brown.edu/", height: 44 },
   ],
 
   sponsors: [], // add { name, logo, url } entries here to show a sponsors row

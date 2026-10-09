@@ -111,6 +111,8 @@
     $("#speakers-grid").style.display = "none";
     $("#speakers-note").insertAdjacentElement("afterend", el("p", "empty", C.speakersEmpty));
   }
+  // Five per row once there are more than eight organizers, otherwise four
+  $("#organizers-grid").style.setProperty("--cols", C.organizers.length > 8 ? 5 : 4);
   people(C.organizers, "#organizers-grid");
 
   // Schedule

@@ -231,7 +231,7 @@ h1 {
 #speakers-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; column-gap: 2rem; }
 .sgroup { display: grid; grid-row: span 2; grid-template-rows: subgrid; }
 .sgroup .thead { margin-bottom: 0.9rem; }
-.sgroup .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+.sgroup .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
 .sgroup .card { width: auto; }
 .sgroup .card p { min-height: 2.8em; } /* reserve two affiliation lines so all cards match */
 .sgroup .photo { width: 96px; height: 96px; }
@@ -267,7 +267,7 @@ h1 {
 .is-placeholder .photo img { opacity: 0.55; }
 
 /* Organizers: five per row on desktop */
-#organizers-grid .card { width: calc((100% - 4 * 1rem) / 5); }
+#organizers-grid .card { width: calc((100% - (var(--cols, 5) - 1) * 1rem) / var(--cols, 5)); }
 
 /* Schedule timeline: time on the left, a rail with a marker per session type */
 .timeline { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2.5rem; }
@@ -336,7 +336,6 @@ table { border-collapse: collapse; width: 100%; }
   #speakers-grid { grid-template-columns: 1fr; }
   .sgroup + .sgroup { margin-top: 1.5rem; }
   .card, #organizers-grid .card { width: calc((100% - 2 * 1rem) / 3); }
-  .sgroup .cards { grid-template-columns: repeat(4, 1fr); }
   .cfp-grid { grid-template-columns: 1fr; }
   .topic-groups { display: block; }
   .tgroup { display: block; margin-bottom: 1.5rem; }
