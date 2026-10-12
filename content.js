@@ -156,8 +156,8 @@ window.CONTENT = {
   organizers: [
     // Postdocs first, then PhD students, then PIs.
     { name: "Nikolaos Tsagkas", affiliation: "University of Amsterdam", url: "https://tsagkas.github.io/", photo: "assets/tsagkas.jpg" },
-    { name: "Christian Gumbsch", affiliation: "University of Amsterdam", url: "https://cgumbsch.github.io/", photo: "assets/gumbsh.png" },
     { name: "Iman Nematollahi", affiliation: "University of Freiburg", url: "https://imanema.com/", photo: "assets/nematollahi.jpeg" },
+    { name: "Christian Gumbsch", affiliation: "University of Amsterdam", url: "https://cgumbsch.github.io/", photo: "assets/gumbsh.png" },
     { name: "Alberta Longhini", affiliation: "Stanford University", url: "https://albilo17.github.io/", photo: "assets/longhini.jpg" },
     // Hidden for now, uncomment to show Matteo again (photo is assets/gamba.jpg):
     // { name: "Matteo Gamba", affiliation: "Brown University", url: "https://www.matteogamba.me/about/", photo: "assets/gamba.jpg", photoPos: "50% 35%" },
